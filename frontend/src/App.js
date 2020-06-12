@@ -1,4 +1,6 @@
 import React from 'react';
+
+import data from './data';
 import './App.css';
 
 function App() {
@@ -40,186 +42,35 @@ function App() {
 			<main className='main'>
 				<div className='content'>
 					<ul className='products'>
-						<li>
-							<div className='product'>
-								<img
-									className='product-image'
-									src='/images/shirtslim.jpg'
-									alt='shirt'
-								/>
-								<a href='productItem.html'>
-									<div className='product-name'>
-										{' '}
-										Slim Shirt
+						{data.products.map(product => {
+              return(
+                <li key={product.id}>
+								<div className='product'>
+									<img
+										className='product-image'
+										src='/images/shirtslim.jpg'
+										alt='shirt'
+									/>
+									<a href='productItem.html'>
+										<div className='product-name'>
+											{product.name}
+										</div>
+									</a>
+									<div className='product-brand'>
+										{product.brand}
 									</div>
-								</a>
-								<div className='product-brand'>Nike</div>
-								<div className='product-price'>$60</div>
-								<div className='product-rating'>
-									4.5 stars (10 reviews)
-								</div>
-							</div>
-						</li>
-						<li>
-							<div className='product'>
-								<img
-									className='product-image'
-									src='/images/shirtslim.jpg'
-									alt='shirt'
-								/>
-								<a href='productItem.html'>
-									<div className='product-name'>
-										{' '}
-										Slim Shirt
+									<div className='product-price'>
+										&#x20B9;{product.price}
 									</div>
-								</a>
-								<div className='product-brand'>Nike</div>
-								<div className='product-price'>$60</div>
-								<div className='product-rating'>
-									4.5 stars (10 reviews)
-								</div>
-							</div>
-						</li>{' '}
-						<li>
-							<div className='product'>
-								<img
-									className='product-image'
-									src='/images/shirtslim.jpg'
-									alt='shirt'
-								/>
-								<a href='productItem.html'>
-									<div className='product-name'>
-										{' '}
-										Slim Shirt
+									<div className='product-rating'>
+										{product.rating} stars (
+										{product.numReviews} reviews)
 									</div>
-								</a>
-								<div className='product-brand'>Nike</div>
-								<div className='product-price'>$60</div>
-								<div className='product-rating'>
-									4.5 stars (10 reviews)
 								</div>
-							</div>
-						</li>{' '}
-						<li>
-							<div className='product'>
-								<img
-									className='product-image'
-									src='/images/shirtslim.jpg'
-									alt='shirt'
-								/>
-								<a href='productItem.html'>
-									<div className='product-name'>
-										{' '}
-										Slim Shirt
-									</div>
-								</a>
-								<div className='product-brand'>Nike</div>
-								<div className='product-price'>$60</div>
-								<div className='product-rating'>
-									4.5 stars (10 reviews)
-								</div>
-							</div>
-						</li>{' '}
-						<li>
-							<div className='product'>
-								<img
-									className='product-image'
-									src='./images/shirtslim.jpg'
-									alt='shirt'
-								/>
-								<a href='productItem.html'>
-									<div className='product-name'>
-										{' '}
-										Slim Shirt
-									</div>
-								</a>
-								<div className='product-brand'>Nike</div>
-								<div className='product-price'>$60</div>
-								<div className='product-rating'>
-									4.5 stars (10 reviews)
-								</div>
-							</div>
-						</li>{' '}
-						<li>
-							<div className='product'>
-								<img
-									className='product-image'
-									src='./images/shirtslim.jpg'
-									alt='shirt'
-								/>
-								<a href='productItem.html'>
-									<div className='product-name'>
-										{' '}
-										Slim Shirt
-									</div>
-								</a>
-								<div className='product-brand'>Nike</div>
-								<div className='product-price'>$60</div>
-								<div className='product-rating'>
-									4.5 stars (10 reviews)
-								</div>
-							</div>
-						</li>{' '}
-						<li>
-							<div className='product'>
-								<img
-									className='product-image'
-									src='./images/shirtslim.jpg'
-									alt='shirt'
-								/>
-								<a href='productItem.html'>
-									<div className='product-name'>
-										{' '}
-										Slim Shirt
-									</div>
-								</a>
-								<div className='product-brand'>Nike</div>
-								<div className='product-price'>$60</div>
-								<div className='product-rating'>
-									4.5 stars (10 reviews)
-								</div>
-							</div>
-						</li>{' '}
-						<li>
-							<div className='product'>
-								<img
-									className='product-image'
-									src='./images/shirtslim.jpg'
-									alt='shirt'
-								/>
-								<a href='productItem.html'>
-									<div className='product-name'>
-										{' '}
-										Slim Shirt
-									</div>
-								</a>
-								<div className='product-brand'>Nike</div>
-								<div className='product-price'>$60</div>
-								<div className='product-rating'>
-									4.5 stars (10 reviews)
-								</div>
-							</div>
-						</li>{' '}
-						<li>
-							<div className='product'>
-								<img
-									className='product-image'
-									src='./images/shirtslim.jpg'
-									alt='shirt'
-								/>
-								<a href='productItem.html'>
-									<div className='product-name'>
-										{' '}
-										Slim Shirt
-									</div>
-								</a>
-								<div className='product-brand'>Nike</div>
-								<div className='product-price'>$60</div>
-								<div className='product-rating'>
-									4.5 stars (10 reviews)
-								</div>
-							</div>
-						</li>
+							</li>
+              )
+            })
+            }
 					</ul>
 				</div>
 			</main>
