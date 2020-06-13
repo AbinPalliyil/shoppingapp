@@ -1,7 +1,7 @@
 export default  {
 	products: [
 		{
-			id: 1,
+			_id: 1,
 			name: 'slim shirt',
 			category: 'shirts',
 			brand: 'Nike',
@@ -9,9 +9,10 @@ export default  {
 			price: 1300,
 			rating: 4,
 			numReviews: 50,
+			description: "this is one of the coolest style in now a days"
 		},
 		{
-			id: 2,
+			_id: 2,
             name: 'big shirt',
             category: 'shirts',            
 			brand: 'Addidas',
@@ -19,9 +20,11 @@ export default  {
 			price: 1400,
 			rating: 4.5,
 			numReviews: 100,
+			description: "Linen type comfort fit and nice emprotary works"
+
 		},
 		{
-			id: 3,
+			_id: 3,
 			name: 'pencil fit',
 			category: 'pants',
 			brand: 'basics',
@@ -29,6 +32,8 @@ export default  {
 			price: 1200,
 			rating: 4,
 			numReviews: 10,
+			description: "Modern outfilts with different colors"
+
 		},
 	],
 };
