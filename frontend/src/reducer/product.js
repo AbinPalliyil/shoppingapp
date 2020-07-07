@@ -1,5 +1,5 @@
 import {
-	PRODUCT_LIST_ERROR,
+	PRODUCT_LIST_FAIL,
 	PRODUCT_LIST_REQUEST,
 	PRODUCT_LIST_SUCCESS,
 } from '../type';
@@ -17,7 +17,7 @@ export default (state = {products: []}, action) => {
 				loading: false,
 				products: action.payload,
 			};
-		case PRODUCT_LIST_ERROR:
+		case PRODUCT_LIST_FAIL:
 			return {
 				loading: false,
 				error: action.payload,
