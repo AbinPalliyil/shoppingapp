@@ -9,7 +9,8 @@ export default  {
 			price: 1300,
 			rating: 4,
 			numReviews: 50,
-			description: "this is one of the coolest style in now a days"
+			description: "this is one of the coolest style in now a days",
+			countInStock: 3
 		},
 		{
 			_id: 2,
@@ -20,7 +21,9 @@ export default  {
 			price: 1400,
 			rating: 4.5,
 			numReviews: 100,
-			description: "Linen type comfort fit and nice emprotary works"
+			description: "Linen type comfort fit and nice emprotary works",
+			countInStock: 4
+
 
 		},
 		{
@@ -32,7 +35,9 @@ export default  {
 			price: 1200,
 			rating: 4,
 			numReviews: 10,
-			description: "Modern outfilts with different colors"
+			description: "Modern outfilts with different colors",
+			countInStock: 5
+
 
 		},
 	],
