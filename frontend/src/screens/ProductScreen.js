@@ -23,7 +23,7 @@ const ProductScreen = (props) => {
 
     // handle add to keart
     const handleAddToKart = () => {
-        props.history.push(`cart/${id}?qty=${qty}`)
+        props.history.push(`/cart/${id}?qty=${qty}`)
     }
     
 

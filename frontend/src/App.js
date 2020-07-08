@@ -4,6 +4,7 @@ import ProductScreen from './screens/ProductScreen';
 import HomeScreen from './screens/HomeScreen';
 
 import './App.css';
+import CartScreen from './screens/CartScreen';
 
 function App() {
 	const openSideMenu = () => {
@@ -19,7 +20,7 @@ function App() {
 				<header className='header'>
 					<div className='brand'>
 						<button onClick={openSideMenu}>&#9776;</button>
-						<Link to="/" >Amazona</Link>
+						<Link to='/'>Amazona</Link>
 					</div>
 					<div className='header-links'>
 						<a href='card.html'>cart</a>
@@ -46,11 +47,8 @@ function App() {
 
 				<main className='main'>
 					<div className='content'>
-						<Route
-							path='/products/:id'
-							exact={true}
-							component={ProductScreen}
-						/>
+						<Route path='/products/:id' component={ProductScreen} />
+						<Route path='/cart/:id?' component={CartScreen} />
 						<Route path='/' exact={true} component={HomeScreen} />
 					</div>
 				</main>
