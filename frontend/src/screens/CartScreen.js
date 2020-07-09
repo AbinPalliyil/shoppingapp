@@ -23,6 +23,10 @@ const CartScreen = (props) => {
 			dispatch(addToCart(productId, qty));
 		}
 	}, []);
+
+	const chekoutHandler = () => {
+		props.history.push("/signin?redirect=shipping")
+	}
 	return (
 		<div className='cart'>
 			<div className='cart-list'>
@@ -35,7 +39,7 @@ const CartScreen = (props) => {
 						<div>Cart item is empty</div>
 					) : (
 						cartItems.map((item) => (
-                            <li>
+                            <li key={item.product}>
 							<div>
 								<div className='cart-image'>
 									<img  src={item.imageUrl} alt='' />
@@ -70,6 +74,7 @@ const CartScreen = (props) => {
 					{cartItems.reduce((a, c) => a + c.price * c.qty, 0)})
 				</h3>
 				<button
+					onClick={chekoutHandler}
 					className='button primary'
 					disabled={cartItems.length === 0}>
 					Checkout
